@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :locations do
     resources :visits
-  end 
+  end
 
   get 'home' => 'home#welcome'
   get 'contact' => 'home#contact'
