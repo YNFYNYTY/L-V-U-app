@@ -14,5 +14,8 @@
   <%= f.text_field :premium %>
 
   <%= f.submit 'EDIT USER' %>
+  <button class='users'>
+  <%= link_to "Back to Users", users_path(@users) %>
+  </button>
 
 <% end %>
