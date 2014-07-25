@@ -22,6 +22,7 @@ class VisitsController < ApplicationController
 
     if @visit.save
       redirect_to action: 'index', controller: 'visits', location_id: @location.id
+      UserMailer.visit_created(@location).deliver
       flash[:notice] = 'Thanks for creating a new visit :)'
     else
       flash[:alert] = 'ERROR DETECTED MAYDAY'
